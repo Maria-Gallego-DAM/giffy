@@ -10,7 +10,7 @@ import ErrorPage from './pages/Error';
 
 import { UserContextProvider } from './context/UserContext';
 import { GifsContextProvider } from './context/GifsContext';
-import { Link, Route } from "wouter";
+import { Link, Route, Switch } from "wouter";
 
 const HomePage = React.lazy(() => import('./pages/home'))
 
@@ -27,25 +27,26 @@ function App() {
               </figure>
             </Link>
             <GifsContextProvider>
-              <Route
-                component={HomePage}
-                path="/"
-              />
-              <Route
-                component={SearchResults}
-                path="/search/:keyword/:rating?" />
-              <Route
-                component={Detail}
-                path="/gif/:id"
-              />
-              <Route
-                component={Login}
-                path="/login"
-              />
-              <Route
-                component={ErrorPage}
-                path="/:rest*"
-              />
+              <Switch>
+                <Route
+                  component={HomePage}
+                  path="/"
+                />
+                <Route
+                  component={SearchResults}
+                  path="/search/:keyword/:rating?" />
+                <Route
+                  component={Detail}
+                  path="/gif/:id"
+                />
+                <Route
+                  component={Login}
+                  path="/login"
+                />
+                <Route
+                  component={ErrorPage}
+                />
+              </Switch>
             </GifsContextProvider>
           </section>
         </Suspense>
