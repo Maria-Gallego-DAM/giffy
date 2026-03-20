@@ -1,0 +1,18 @@
+.gf-fav{
+    background: rgba(2, 2, 2, 0.8);
+    border:0;
+    border-radius: 100px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    transition: all .3s ease;
+}
+
+.gf-fav:hover {
+    background: rgba(211, 2, 2, 0.3);
+}
+
+.gf-fav span {
+    display: block;
+    width: 20px;
+}
