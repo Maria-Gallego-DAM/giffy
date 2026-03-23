@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import useUser from "../../../hooks/useUser";
 import { useLocation } from "wouter";
-import Modal from "../Modal";
+import { ModalPortal } from "../Modal";
 import Login from "../Login";
 import "./Fav.css";
 
@@ -28,7 +28,7 @@ export default function Fav({ id }) {
             <button className="gf-fav" onClick={handleClick}>
                 <span role="img" aria-label={label}>{emoji}</span>
             </button>
-            {showModal && <Modal onClose={handleClose}><Login /></Modal>}
+            {showModal && <ModalPortal onClose={handleClose}><Login /></ModalPortal>}
         </>
     )
 }

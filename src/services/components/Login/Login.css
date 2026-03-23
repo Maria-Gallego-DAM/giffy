@@ -9,6 +9,17 @@
     font-size: 14px;
 }
 
+.form-error {
+    color: orangered;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.form input.error{
+    border: 2px solid red;
+
+}
+
 .form input {
     background: #fff;
     border: none;

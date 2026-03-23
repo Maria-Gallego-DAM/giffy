@@ -6,9 +6,9 @@ import "./index.css";
 
 export default function Header() {
     //const isLogged = false;
-    const {isLogged, logout} = useUser()
+    const { isLogged, logout } = useUser()
 
-    const handleClick = e =>{
+    const handleClick = e => {
         e.preventDefault();
         logout();
     }
@@ -18,7 +18,10 @@ export default function Header() {
             {
                 isLogged
                     ? <Link href='#' onClick={handleClick}>Logout</Link>
-                    : <Link to="/login">Login</Link>
+                    : <>
+                        <Link to="/login">Login</Link>
+                        <Link to="/register">Register</Link>
+                    </>
             }
         </header>
     )

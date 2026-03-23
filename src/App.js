@@ -3,6 +3,7 @@ import './App.css';
 import logo from './logo.png'
 
 import Login from './pages/Login';
+import Register from './pages/Register';
 import Header from './services/components/Header';
 import SearchResults from './pages/SearchResults';
 import Detail from './pages/Detail';
@@ -43,6 +44,7 @@ function App() {
                   component={Login}
                   path="/login"
                 />
+                <Route component={Register} path="/register" />
                 <Route
                   component={ErrorPage}
                 />
